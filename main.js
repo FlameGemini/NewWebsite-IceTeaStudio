@@ -103,9 +103,13 @@
     }, 3200);
   };
 
-  document.querySelectorAll(".project-list__item[data-notice]").forEach((btn) => {
+  document.querySelectorAll(".project-list__item[data-notice-key], .project-list__item[data-notice]").forEach((btn) => {
     btn.addEventListener("click", () => {
-      showNotice(btn.getAttribute("data-notice"));
+      const key = btn.getAttribute("data-notice-key");
+      const message =
+        (key && window.ITS_I18N && window.ITS_I18N.t(key)) ||
+        btn.getAttribute("data-notice");
+      showNotice(message);
     });
   });
 })();

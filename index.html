@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -8,6 +8,22 @@
   <meta name="author" content="Ice Tea Studio">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://ice-tea.top/">
+  <script>
+    try {
+      var _l = localStorage.getItem("its-lang");
+      if (_l) {
+        var s = String(_l).toLowerCase();
+        if (_l === "zh-Hant" || s === "zh-tw" || s === "zh-hk" || s === "zh-hant" || s.indexOf("hant") >= 0) document.documentElement.lang = "zh-Hant";
+        else if (_l === "zh-CN" || s.indexOf("zh") === 0) document.documentElement.lang = "zh-CN";
+        else if (_l === "ja" || s.indexOf("ja") === 0) document.documentElement.lang = "ja";
+        else if (_l === "es" || s.indexOf("es") === 0) document.documentElement.lang = "es";
+        else if (_l === "ru" || s.indexOf("ru") === 0) document.documentElement.lang = "ru";
+        else if (_l === "hi" || s.indexOf("hi") === 0) document.documentElement.lang = "hi";
+        else if (_l === "zh-meow" || s === "zh-meow") document.documentElement.lang = "zh-CN";
+        else if (_l === "en-meow" || s === "en-meow" || _l === "meow") document.documentElement.lang = "en";
+      }
+    } catch (e) {}
+  </script>
 
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ice-tea.top/">
@@ -40,7 +56,7 @@
         "name": "Ice Tea Studio",
         "description": "Official website of Ice Tea Studio, an independent studio founded in 2023.",
         "publisher": { "@id": "https://ice-tea.top/#organization" },
-        "inLanguage": "en"
+        "inLanguage": ["en", "es", "ru", "hi", "ja", "zh-CN", "zh-Hant"]
       },
       {
         "@type": "Organization",
@@ -59,8 +75,6 @@
   </script>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
-
   <div class="atmosphere" aria-hidden="true">
     <div class="atmosphere__wash atmosphere__wash--leaf" data-speed="0.08"></div>
     <div class="atmosphere__wash atmosphere__wash--amber" data-speed="0.16"></div>
@@ -70,10 +84,31 @@
 
   <div class="page">
     <header class="hero-shell">
-      <nav class="topnav" aria-label="Primary">
-        <a class="nav-link" data-magnetic href="#projects">Projects</a>
-        <a class="nav-link" data-magnetic href="mailto:feedback@ice-tea.top">Email</a>
-        <a class="nav-link" data-magnetic href="https://github.com/Ice-Tea-Studio" rel="noopener noreferrer" target="_blank">GitHub</a>
+      <nav class="topnav" data-i18n-aria="nav_aria" aria-label="Primary">
+        <a class="nav-link" data-magnetic href="people.html" data-i18n="nav_people">People</a>
+        <div class="lang-switch" data-i18n-aria="lang_aria" role="group" aria-label="Language">
+          <button type="button" class="lang-switch__btn" data-lang="en" aria-pressed="true">EN</button>
+          <span class="lang-switch__sep" aria-hidden="true">/</span>
+          <button type="button" class="lang-switch__btn" data-lang="es" aria-pressed="false">ES</button>
+          <span class="lang-switch__sep" aria-hidden="true">/</span>
+          <button type="button" class="lang-switch__btn" data-lang="ru" aria-pressed="false">RU</button>
+          <span class="lang-switch__sep" aria-hidden="true">/</span>
+          <button type="button" class="lang-switch__btn" data-lang="hi" aria-pressed="false">HI</button>
+          <span class="lang-switch__sep" aria-hidden="true">/</span>
+          <button type="button" class="lang-switch__btn" data-lang="ja" aria-pressed="false">日本語</button>
+          <span class="lang-switch__sep" aria-hidden="true">/</span>
+          <button type="button" class="lang-switch__btn" data-lang="zh-CN" aria-pressed="false">中文</button>
+          <span class="lang-switch__sep" aria-hidden="true">/</span>
+          <button type="button" class="lang-switch__btn" data-lang="zh-Hant" aria-pressed="false">繁體</button>
+          <span class="lang-switch__sep" aria-hidden="true">/</span>
+          <div class="lang-switch__meow">
+            <button type="button" class="lang-switch__btn lang-switch__meow-toggle" aria-expanded="false" aria-haspopup="true">meow</button>
+            <div class="lang-switch__meow-menu" hidden role="menu">
+              <button type="button" class="lang-switch__meow-option" data-lang="en-meow" role="menuitem">en-meow</button>
+              <button type="button" class="lang-switch__meow-option" data-lang="zh-meow" role="menuitem">zh-meow</button>
+            </div>
+          </div>
+        </div>
       </nav>
 
       <section class="hero" id="top" aria-labelledby="brand-title">
@@ -88,8 +123,8 @@
             </span>
           </span>
         </h1>
-        <p class="since" data-reveal>Since 2023</p>
-        <a class="scroll-cue" data-reveal href="#about" aria-label="Scroll to About">
+        <p class="since" data-reveal data-i18n="since">Since 2023</p>
+        <a class="scroll-cue" data-reveal href="#about" data-i18n-aria="scroll_about" aria-label="Scroll to About">
           <span class="scroll-cue__mouse" aria-hidden="true"></span>
         </a>
       </section>
@@ -98,18 +133,20 @@
     <main id="main">
       <section class="about" id="about" aria-labelledby="about-heading">
         <header class="about__head" data-reveal>
-          <h2 id="about-heading" class="about__title">About</h2>
-          <p class="about__kicker">Who we are</p>
+          <h2 id="about-heading" class="about__title" data-i18n="about_title">About</h2>
+          <p class="about__kicker" data-i18n="about_kicker">Who we are</p>
         </header>
         <div class="about__body" data-stagger>
-          <p data-reveal>
+          <p data-reveal data-i18n="about_p1">
             Ice Tea Studio is an independent studio founded in 2023.
             We design and build digital work with care—clean interfaces,
             small tools, and finished details.
           </p>
-          <p data-reveal>
-            This website is our official home. For feedback or questions,
-            write to <a href="mailto:feedback@ice-tea.top">feedback@ice-tea.top</a>.
+          <p data-reveal data-i18n-html="about_p2_html">
+            This website is our official home. Meet the
+            <a href="people.html">people</a> behind it.
+            For feedback or questions, write to
+            <a href="mailto:feedback@ice-tea.top">feedback@ice-tea.top</a>.
             Public code lives on
             <a href="https://github.com/Ice-Tea-Studio" rel="noopener noreferrer" target="_blank">GitHub</a>.
           </p>
@@ -117,17 +154,18 @@
       </section>
 
       <section class="projects" id="projects" aria-labelledby="projects-heading">
-        <h2 id="projects-heading" class="projects__title" data-reveal>Projects</h2>
+        <h2 id="projects-heading" class="projects__title" data-reveal data-i18n="projects_title">Projects</h2>
         <ul class="project-list" data-stagger>
           <li data-reveal>
             <button
               type="button"
               class="project-list__item"
+              data-notice-key="project_ardel_notice"
               data-notice="Coming soon. Stay tuned."
             >
               <div class="project-list__copy">
                 <span class="project-list__name">Ardel</span>
-                <span class="project-list__desc">A native-style all-in-one Minecraft launcher.</span>
+                <span class="project-list__desc" data-i18n="project_ardel_desc">A native-style all-in-one Minecraft launcher.</span>
               </div>
             </button>
           </li>
@@ -135,11 +173,12 @@
             <button
               type="button"
               class="project-list__item"
+              data-notice-key="project_cingem_notice"
               data-notice="Sorry, this tool is for internal use only."
             >
               <div class="project-list__copy">
                 <span class="project-list__name">CinGem</span>
-                <span class="project-list__desc">A simple P2P chat tool for friends.</span>
+                <span class="project-list__desc" data-i18n="project_cingem_desc">A simple P2P chat tool for friends.</span>
               </div>
             </button>
           </li>
@@ -147,17 +186,18 @@
             <button
               type="button"
               class="project-list__item"
+              data-notice-key="project_trovanto_notice"
               data-notice="Early build complete — now in private beta."
             >
               <div class="project-list__copy">
                 <span class="project-list__name">Trovanto</span>
-                <span class="project-list__desc">An incognito browser.</span>
+                <span class="project-list__desc" data-i18n="project_trovanto_desc">An incognito browser.</span>
               </div>
             </button>
           </li>
           <li data-reveal>
             <div class="project-list__item project-list__item--more">
-              <p class="project-list__more">And more…</p>
+              <p class="project-list__more" data-i18n="projects_more">And more…</p>
             </div>
           </li>
         </ul>
@@ -169,7 +209,7 @@
       <div class="footer__copy">
         <p><small>&copy; 2026 Ice Tea Studio</small></p>
         <p class="footer__powered">
-          <small>Powered by <a href="https://www.cloudflare.com/" rel="noopener noreferrer" target="_blank">Cloudflare</a></small>
+          <small><span data-i18n="powered_prefix">Powered by</span> <a href="https://www.cloudflare.com/" rel="noopener noreferrer" target="_blank">Cloudflare</a></small>
         </p>
       </div>
     </footer>
@@ -177,6 +217,7 @@
 
   <div class="toast" id="project-toast" role="status" aria-live="polite" hidden></div>
 
+  <script src="i18n.js"></script>
   <script src="main.js" defer></script>
 </body>
 </html>
