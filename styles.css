@@ -32,7 +32,7 @@
 
 :root {
   --ink: #14201c;
-  --ink-soft: rgba(20, 32, 28, 0.58);
+  --ink-soft: #555e5a;
   --mist: #f7f9f8;
   --paper: #ffffff;
   --leaf: #3d6b5a;
@@ -151,24 +151,6 @@ a:focus-visible {
   mix-blend-mode: multiply;
 }
 
-.scroll-progress {
-  position: fixed;
-  inset: 0 0 auto;
-  height: 2px;
-  z-index: 60;
-  background: rgba(20, 32, 28, 0.06);
-  pointer-events: none;
-}
-
-.scroll-progress__bar {
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, #2f5d4c, var(--leaf));
-  transform: scaleX(0);
-  transform-origin: left center;
-  will-change: transform;
-}
-
 .page {
   position: relative;
   z-index: 1;
@@ -226,7 +208,6 @@ a:focus-visible {
   line-height: 0.9;
   letter-spacing: -0.035em;
   color: var(--ink);
-  overflow: hidden;
 }
 
 .brand__row {
@@ -241,9 +222,8 @@ a:focus-visible {
 .brand .char {
   display: inline-block;
   opacity: 0;
-  transform: translateY(110%) rotate(6deg);
-  filter: blur(6px);
-  will-change: transform, opacity, filter;
+  transform: translateY(0.35em);
+  will-change: transform, opacity;
 }
 
 .brand .char--space {
@@ -251,8 +231,12 @@ a:focus-visible {
 }
 
 .brand.is-ready .char {
-  animation: char-in 0.85s var(--ease-out) forwards;
-  animation-delay: calc(var(--i) * 0.04s + 0.15s);
+  animation: char-in 0.75s var(--ease-out) forwards;
+  animation-delay: calc(var(--i) * 0.035s + 0.12s);
+}
+
+.brand.is-done .char {
+  will-change: auto;
 }
 
 .since {
@@ -375,18 +359,15 @@ body.is-scrolled .scroll-cue {
 /* Reveal system — same idea as cinderzero */
 [data-reveal] {
   opacity: 0;
-  transform: translateY(28px);
-  filter: blur(4px);
+  transform: translateY(22px);
   transition:
     opacity var(--dur) var(--ease-out),
-    transform var(--dur) var(--ease-out),
-    filter var(--dur) var(--ease-out);
+    transform var(--dur) var(--ease-out);
 }
 
 [data-reveal].is-in {
   opacity: 1;
   transform: none;
-  filter: none;
 }
 
 .since[data-reveal] {
@@ -405,7 +386,6 @@ body.is-scrolled .scroll-cue {
   to {
     opacity: 1;
     transform: none;
-    filter: blur(0);
   }
 }
 
@@ -420,7 +400,6 @@ body.is-scrolled .scroll-cue {
     scroll-behavior: auto;
   }
 
-  .scroll-progress__bar,
   .brand .char,
   .brand.is-ready .char,
   [data-reveal],
@@ -430,7 +409,6 @@ body.is-scrolled .scroll-cue {
   .scroll-cue__mouse::after {
     animation: none !important;
     transition: none !important;
-    filter: none !important;
     transform: none !important;
     opacity: 1 !important;
   }

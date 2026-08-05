@@ -1,20 +1,22 @@
 (() => {
-  const scrollBar = document.getElementById("scroll-bar");
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const ambientNodes = [...document.querySelectorAll(".atmosphere__wash[data-speed]")];
 
   document.body.classList.add("is-ready");
 
+  const brand = document.getElementById("brand-title");
+  if (brand) {
+    if (reduceMotion) {
+      brand.classList.add("is-done");
+    } else {
+      window.setTimeout(() => brand.classList.add("is-done"), 1500);
+    }
+  }
+
   let ticking = false;
 
   const onScroll = () => {
     const y = window.scrollY;
-    const max = document.documentElement.scrollHeight - window.innerHeight;
-    const progress = max > 0 ? y / max : 0;
-
-    if (scrollBar) {
-      scrollBar.style.transform = `scaleX(${progress})`;
-    }
 
     document.body.classList.toggle("is-scrolled", y > 40);
 
@@ -40,7 +42,6 @@
   );
   onScroll();
 
-  /* Reveal system — same pattern as cinderzero */
   const reveals = document.querySelectorAll("[data-reveal]");
   if (reduceMotion || !("IntersectionObserver" in window)) {
     reveals.forEach((el) => el.classList.add("is-in"));
@@ -64,7 +65,6 @@
     });
   }
 
-  /* Magnetic links — desktop pointer only, no 3D */
   if (!reduceMotion && window.matchMedia("(pointer: fine)").matches) {
     document.querySelectorAll("[data-magnetic]").forEach((btn) => {
       const strength = 12;
