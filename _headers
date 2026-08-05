@@ -13,5 +13,11 @@
 /*.js
   Cache-Control: public, max-age=604800
 
-/favicon.svg
+/icon-transparent.png
+  Cache-Control: public, max-age=604800
+
+/icon-white.png
+  Cache-Control: public, max-age=604800
+
+/og-image.png
   Cache-Control: public, max-age=604800

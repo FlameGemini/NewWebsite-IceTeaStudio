@@ -15,16 +15,18 @@
   <meta property="og:description" content="Independent studio founded in 2023. Clean interfaces, small tools, and finished details.">
   <meta property="og:site_name" content="Ice Tea Studio">
   <meta property="og:locale" content="en_US">
-  <meta property="og:image" content="https://ice-tea.top/og-image.svg">
+  <meta property="og:image" content="https://ice-tea.top/og-image.png">
+  <meta property="og:image:type" content="image/png">
   <meta property="og:image:alt" content="Ice Tea Studio">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Ice Tea Studio — Official Website">
   <meta name="twitter:description" content="Independent studio founded in 2023. Clean interfaces, small tools, and finished details.">
-  <meta name="twitter:image" content="https://ice-tea.top/og-image.svg">
+  <meta name="twitter:image" content="https://ice-tea.top/og-image.png">
 
   <meta name="theme-color" content="#f7f9f8">
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="icon-transparent.png" type="image/png">
+  <link rel="apple-touch-icon" href="icon-white.png">
   <link rel="stylesheet" href="styles.css">
 
   <script type="application/ld+json">
@@ -50,7 +52,7 @@
         "sameAs": [
           "https://github.com/Ice-Tea-Studio"
         ],
-        "logo": "https://ice-tea.top/favicon.svg"
+        "logo": "https://ice-tea.top/icon-transparent.png"
       }
     ]
   }
@@ -121,7 +123,7 @@
             <button
               type="button"
               class="project-list__item"
-              data-notice="即将发布，请持续关注"
+              data-notice="Coming soon. Stay tuned."
             >
               <div class="project-list__copy">
                 <span class="project-list__name">Ardel</span>
@@ -133,7 +135,7 @@
             <button
               type="button"
               class="project-list__item"
-              data-notice="非常抱歉，此工具仅供内部使用"
+              data-notice="Sorry, this tool is for internal use only."
             >
               <div class="project-list__copy">
                 <span class="project-list__name">CinGem</span>
@@ -145,7 +147,7 @@
             <button
               type="button"
               class="project-list__item"
-              data-notice="早期开发完成，正在内测中"
+              data-notice="Early build complete — now in private beta."
             >
               <div class="project-list__copy">
                 <span class="project-list__name">Trovanto</span>
@@ -163,7 +165,13 @@
     </main>
 
     <footer class="footer" data-reveal>
-      <p><small>&copy; 2026 Ice Tea Studio</small></p>
+      <img class="footer__mark" src="icon-transparent.png" width="28" height="28" alt="" decoding="async">
+      <div class="footer__copy">
+        <p><small>&copy; 2026 Ice Tea Studio</small></p>
+        <p class="footer__powered">
+          <small>Powered by <a href="https://www.cloudflare.com/" rel="noopener noreferrer" target="_blank">Cloudflare</a></small>
+        </p>
+      </div>
     </footer>
   </div>
 
