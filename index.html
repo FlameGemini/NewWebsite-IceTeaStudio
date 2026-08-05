@@ -27,93 +27,65 @@
   <a class="skip-link" href="#main">Skip to content</a>
 
   <div class="atmosphere" aria-hidden="true">
-    <div class="atmosphere__wash atmosphere__wash--leaf"></div>
-    <div class="atmosphere__wash atmosphere__wash--amber"></div>
-    <div class="atmosphere__wash atmosphere__wash--ice"></div>
+    <div class="atmosphere__wash atmosphere__wash--leaf" data-speed="0.08"></div>
+    <div class="atmosphere__wash atmosphere__wash--amber" data-speed="0.16"></div>
+    <div class="atmosphere__wash atmosphere__wash--ice" data-speed="0.11"></div>
     <div class="atmosphere__grain"></div>
   </div>
 
-  <header class="site-header reveal">
-    <p class="site-header__mark">Ice Tea Studio</p>
-    <p class="site-header__meta">ice-tea.top</p>
-  </header>
+  <div class="scroll-progress" aria-hidden="true">
+    <div class="scroll-progress__bar" id="scroll-bar"></div>
+  </div>
 
-  <main id="main">
-    <section class="hero" aria-labelledby="brand-title">
-      <div class="hero__copy">
-        <p class="eyebrow reveal">Official website</p>
-        <h1 id="brand-title" class="hero__brand reveal">
-          <span class="hero__line">Ice Tea</span>
-          <span class="hero__line hero__line--studio">Studio</span>
+  <div class="page">
+    <header class="hero-shell">
+      <nav class="topnav" aria-label="Primary">
+        <a class="nav-link" data-magnetic href="mailto:feedback@ice-tea.top">Email</a>
+        <a class="nav-link" data-magnetic href="https://github.com/Ice-Tea-Studio" rel="noopener noreferrer" target="_blank">GitHub</a>
+      </nav>
+
+      <section class="hero" id="top" aria-labelledby="brand-title">
+        <h1 class="brand is-ready" id="brand-title" aria-label="Ice Tea Studio">
+          <span class="brand__row">
+            <span class="char" style="--i:0" aria-hidden="true">I</span><span class="char" style="--i:1" aria-hidden="true">c</span><span class="char" style="--i:2" aria-hidden="true">e</span><span class="char char--space" style="--i:3" aria-hidden="true">&nbsp;</span><span class="char" style="--i:4" aria-hidden="true">T</span><span class="char" style="--i:5" aria-hidden="true">e</span><span class="char" style="--i:6" aria-hidden="true">a</span>
+          </span>
+          <span class="brand__row brand__row--accent">
+            <span class="char" style="--i:7" aria-hidden="true">S</span><span class="char" style="--i:8" aria-hidden="true">t</span><span class="char" style="--i:9" aria-hidden="true">u</span><span class="char" style="--i:10" aria-hidden="true">d</span><span class="char" style="--i:11" aria-hidden="true">i</span><span class="char" style="--i:12" aria-hidden="true">o</span>
+          </span>
         </h1>
-      </div>
+        <p class="since" data-reveal>Since 2023</p>
+        <a class="scroll-cue" data-reveal href="#about" aria-label="Scroll to About">
+          <span class="scroll-cue__mouse" aria-hidden="true"></span>
+        </a>
+      </section>
+    </header>
 
-      <aside class="hero__aside reveal" aria-label="Studio details">
-        <dl class="meta-list">
-          <div class="meta-list__item">
-            <dt>Status</dt>
-            <dd>Independent studio</dd>
-          </div>
-          <div class="meta-list__item">
-            <dt>Since</dt>
-            <dd>2026</dd>
-          </div>
-          <div class="meta-list__item">
-            <dt>Home</dt>
-            <dd>ice-tea.top</dd>
-          </div>
-        </dl>
-      </aside>
-    </section>
-
-    <section class="panel" aria-labelledby="about-heading">
-      <div class="panel__grid">
-        <div class="panel__intro reveal">
-          <h2 id="about-heading" class="panel__title">About</h2>
-          <p class="panel__text">
-            Ice Tea Studio is an independent studio. This site is the public home for our work online—
-            a quiet place to find who we are and how to reach us.
+    <main id="main">
+      <section class="about" id="about" aria-labelledby="about-heading">
+        <header class="about__head" data-reveal>
+          <h2 id="about-heading" class="about__title">About</h2>
+          <p class="about__kicker">Who we are</p>
+        </header>
+        <div class="about__body" data-stagger>
+          <p data-reveal>
+            Ice Tea Studio is an independent studio founded in 2023.
+            We design and build digital work with care—clean interfaces,
+            small tools, and finished details.
+          </p>
+          <p data-reveal>
+            This website is our official home. For feedback or questions,
+            write to <a href="mailto:feedback@ice-tea.top">feedback@ice-tea.top</a>.
+            Public code lives on
+            <a href="https://github.com/Ice-Tea-Studio" rel="noopener noreferrer" target="_blank">GitHub</a>.
           </p>
         </div>
+      </section>
+    </main>
 
-        <div class="panel__blocks">
-          <article class="block reveal">
-            <h3 class="block__title">Presence</h3>
-            <p class="block__text">
-              We keep a simple public footprint: this website for the studio name,
-              and GitHub for open work and organization activity.
-            </p>
-          </article>
-
-          <article class="block reveal">
-            <h3 class="block__title">Reach</h3>
-            <p class="block__text">
-              For feedback, questions, or anything else, write to
-              <a href="mailto:feedback@ice-tea.top">feedback@ice-tea.top</a>.
-              Code and public repositories live on
-              <a href="https://github.com/Ice-Tea-Studio" rel="noopener noreferrer" target="_blank">GitHub</a>.
-            </p>
-          </article>
-
-          <article class="block reveal">
-            <h3 class="block__title">Note</h3>
-            <p class="block__text">
-              More pages and materials may appear here later. For now, this landing page
-              is the official entry point for Ice Tea Studio.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer reveal">
-    <nav class="site-footer__links" aria-label="Links">
-      <a href="mailto:feedback@ice-tea.top">feedback@ice-tea.top</a>
-      <a href="https://github.com/Ice-Tea-Studio" rel="noopener noreferrer" target="_blank">GitHub</a>
-    </nav>
-    <p class="site-footer__copy"><small>&copy; 2026 Ice Tea Studio</small></p>
-  </footer>
+    <footer class="footer" data-reveal>
+      <p><small>&copy; 2026 Ice Tea Studio</small></p>
+    </footer>
+  </div>
 
   <script src="main.js" defer></script>
 </body>
