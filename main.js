@@ -79,4 +79,33 @@
       });
     });
   }
+
+  /* Project status notices */
+  const toast = document.getElementById("project-toast");
+  let toastTimer = 0;
+
+  const showNotice = (message) => {
+    if (!toast || !message) return;
+    toast.textContent = message;
+    toast.hidden = false;
+    requestAnimationFrame(() => {
+      toast.classList.add("is-visible");
+    });
+    window.clearTimeout(toastTimer);
+    toastTimer = window.setTimeout(() => {
+      toast.classList.remove("is-visible");
+      window.setTimeout(() => {
+        if (!toast.classList.contains("is-visible")) {
+          toast.hidden = true;
+          toast.textContent = "";
+        }
+      }, reduceMotion ? 0 : 320);
+    }, 3200);
+  };
+
+  document.querySelectorAll(".project-list__item[data-notice]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      showNotice(btn.getAttribute("data-notice"));
+    });
+  });
 })();

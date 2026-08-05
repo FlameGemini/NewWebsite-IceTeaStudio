@@ -69,6 +69,7 @@
   <div class="page">
     <header class="hero-shell">
       <nav class="topnav" aria-label="Primary">
+        <a class="nav-link" data-magnetic href="#projects">Projects</a>
         <a class="nav-link" data-magnetic href="mailto:feedback@ice-tea.top">Email</a>
         <a class="nav-link" data-magnetic href="https://github.com/Ice-Tea-Studio" rel="noopener noreferrer" target="_blank">GitHub</a>
       </nav>
@@ -112,12 +113,61 @@
           </p>
         </div>
       </section>
+
+      <section class="projects" id="projects" aria-labelledby="projects-heading">
+        <h2 id="projects-heading" class="projects__title" data-reveal>Projects</h2>
+        <ul class="project-list" data-stagger>
+          <li data-reveal>
+            <button
+              type="button"
+              class="project-list__item"
+              data-notice="即将发布，请持续关注"
+            >
+              <div class="project-list__copy">
+                <span class="project-list__name">Ardel</span>
+                <span class="project-list__desc">A native-style all-in-one Minecraft launcher.</span>
+              </div>
+            </button>
+          </li>
+          <li data-reveal>
+            <button
+              type="button"
+              class="project-list__item"
+              data-notice="非常抱歉，此工具仅供内部使用"
+            >
+              <div class="project-list__copy">
+                <span class="project-list__name">CinGem</span>
+                <span class="project-list__desc">A simple P2P chat tool for friends.</span>
+              </div>
+            </button>
+          </li>
+          <li data-reveal>
+            <button
+              type="button"
+              class="project-list__item"
+              data-notice="早期开发完成，正在内测中"
+            >
+              <div class="project-list__copy">
+                <span class="project-list__name">Trovanto</span>
+                <span class="project-list__desc">An incognito browser.</span>
+              </div>
+            </button>
+          </li>
+          <li data-reveal>
+            <div class="project-list__item project-list__item--more">
+              <p class="project-list__more">And more…</p>
+            </div>
+          </li>
+        </ul>
+      </section>
     </main>
 
     <footer class="footer" data-reveal>
       <p><small>&copy; 2026 Ice Tea Studio</small></p>
     </footer>
   </div>
+
+  <div class="toast" id="project-toast" role="status" aria-live="polite" hidden></div>
 
   <script src="main.js" defer></script>
 </body>
