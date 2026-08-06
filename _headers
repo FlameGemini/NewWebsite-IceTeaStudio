@@ -9,10 +9,22 @@
   Cache-Control: public, max-age=31536000, immutable
 
 /*.css
-  Cache-Control: public, max-age=3600, must-revalidate
+  Cache-Control: public, max-age=86400, must-revalidate
 
 /*.js
-  Cache-Control: public, max-age=3600, must-revalidate
+  Cache-Control: public, max-age=86400, must-revalidate
+
+/icon-32.png
+  Cache-Control: public, max-age=31536000, immutable
+
+/icon-48.png
+  Cache-Control: public, max-age=31536000, immutable
+
+/icon-192.png
+  Cache-Control: public, max-age=31536000, immutable
+
+/apple-touch-icon.png
+  Cache-Control: public, max-age=31536000, immutable
 
 /icon-transparent.png
   Cache-Control: public, max-age=604800
@@ -20,5 +32,5 @@
 /icon-white.png
   Cache-Control: public, max-age=604800
 
-/og-image.png
+/og-image.jpg
   Cache-Control: public, max-age=604800
