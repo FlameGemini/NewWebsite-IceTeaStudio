@@ -1,7 +1,7 @@
 ﻿(() => {
   const STORAGE_KEY = "its-lang";
   const DEFAULT_LANG = "en";
-  const SUPPORTED = ["en", "es", "ru", "hi", "ja", "zh-CN", "zh-Hant", "en-meow", "zh-meow"];
+  const SUPPORTED = ["en", "es", "fr", "pt", "ru", "hi", "ja", "zh-CN", "zh-Hant", "en-meow", "zh-meow"];
 
   const dict = {
     en: {
@@ -75,6 +75,78 @@
       role_cinder: "Mascota del estudio / Director de inspiración",
       open_seat: "Asiento abierto",
       open_seat_role: "En campaña · Produciendo café",
+    },
+    fr: {
+      meta_title_home: "Ice Tea Studio — Site officiel",
+      meta_desc_home:
+        "Ice Tea Studio est un studio indépendant fondé en 2023. Nous concevons et construisons des travaux numériques avec soin : interfaces propres, petits outils et détails aboutis.",
+      meta_title_people: "Personnes — Ice Tea Studio",
+      meta_desc_people:
+        "Rencontrez les personnes derrière Ice Tea Studio : développeurs, designers et places encore en préparation.",
+      nav_aria: "Principal",
+      nav_home: "Accueil",
+      nav_people: "Personnes",
+      lang_aria: "Langue",
+      since: "Depuis 2023",
+      scroll_about: "Aller à À propos",
+      about_title: "À propos",
+      about_kicker: "Qui nous sommes",
+      about_p1:
+        "Ice Tea Studio est un studio indépendant fondé en 2023. Nous concevons et construisons des travaux numériques avec soin : interfaces propres, petits outils et détails aboutis.",
+      about_p2_html:
+        'Ce site est notre maison officielle. Rencontrez les <a href="people.html">personnes</a> derrière. Pour vos retours ou questions, écrivez à <a href="mailto:feedback@ice-tea.top">feedback@ice-tea.top</a>. Le code public est sur <a href="https://github.com/Ice-Tea-Studio" rel="noopener noreferrer" target="_blank">GitHub</a>.',
+      projects_title: "Projets",
+      project_ardel_desc: "Un lanceur Minecraft tout-en-un de style natif.",
+      project_ardel_notice: "Bientôt disponible. Restez à l’écoute.",
+      project_cingem_desc: "Un outil de chat P2P simple pour les amis.",
+      project_cingem_notice: "Désolé, cet outil est réservé à un usage interne.",
+      project_trovanto_desc: "Un navigateur en navigation privée.",
+      project_trovanto_notice: "Build précoce terminée — actuellement en bêta privée.",
+      projects_more: "Et plus…",
+      powered_prefix: "Propulsé par",
+      people_kicker: "Équipe principale",
+      people_title: "Personnes",
+      people_lead: "Les esprits derrière le travail — et quelques places encore en chauffe.",
+      role_flame: "Fondateur et développeur principal",
+      role_cinder: "Mascotte du studio / Directeur de l’inspiration",
+      open_seat: "Place ouverte",
+      open_seat_role: "En campagne · Production de café",
+    },
+    pt: {
+      meta_title_home: "Ice Tea Studio — Site oficial",
+      meta_desc_home:
+        "Ice Tea Studio é um estúdio independente fundado em 2023. Projetamos e construímos trabalho digital com cuidado: interfaces limpas, pequenas ferramentas e detalhes finalizados.",
+      meta_title_people: "Pessoas — Ice Tea Studio",
+      meta_desc_people:
+        "Conheça as pessoas por trás do Ice Tea Studio: desenvolvedores, designers e assentos abertos ainda em preparação.",
+      nav_aria: "Principal",
+      nav_home: "Início",
+      nav_people: "Pessoas",
+      lang_aria: "Idioma",
+      since: "Desde 2023",
+      scroll_about: "Ir para Sobre",
+      about_title: "Sobre",
+      about_kicker: "Quem somos",
+      about_p1:
+        "Ice Tea Studio é um estúdio independente fundado em 2023. Projetamos e construímos trabalho digital com cuidado: interfaces limpas, pequenas ferramentas e detalhes finalizados.",
+      about_p2_html:
+        'Este site é o nosso lar oficial. Conheça as <a href="people.html">pessoas</a> por trás dele. Para feedback ou perguntas, escreva para <a href="mailto:feedback@ice-tea.top">feedback@ice-tea.top</a>. O código público está no <a href="https://github.com/Ice-Tea-Studio" rel="noopener noreferrer" target="_blank">GitHub</a>.',
+      projects_title: "Projetos",
+      project_ardel_desc: "Um launcher Minecraft tudo-em-um de estilo nativo.",
+      project_ardel_notice: "Em breve. Fique atento.",
+      project_cingem_desc: "Uma ferramenta simples de chat P2P para amigos.",
+      project_cingem_notice: "Desculpe, esta ferramenta é apenas para uso interno.",
+      project_trovanto_desc: "Um navegador anônimo.",
+      project_trovanto_notice: "Build inicial concluída — agora em beta privada.",
+      projects_more: "E mais…",
+      powered_prefix: "Com tecnologia",
+      people_kicker: "Equipe principal",
+      people_title: "Pessoas",
+      people_lead: "As mentes por trás do trabalho — e alguns assentos ainda aquecendo.",
+      role_flame: "Fundador e desenvolvedor líder",
+      role_cinder: "Mascote do estúdio / Diretor de inspiração",
+      open_seat: "Assento aberto",
+      open_seat_role: "Em campanha · Produzindo café",
     },
     ja: {
       meta_title_home: "Ice Tea Studio — 公式サイト",
@@ -343,6 +415,8 @@
     if (lower.startsWith("zh")) return "zh-CN";
     if (lower.startsWith("ja")) return "ja";
     if (lower.startsWith("es")) return "es";
+    if (lower.startsWith("fr")) return "fr";
+    if (lower.startsWith("pt")) return "pt";
     if (lower.startsWith("ru")) return "ru";
     if (lower.startsWith("hi")) return "hi";
     if (lower === "zh-meow" || lower === "zh_meow") return "zh-meow";
@@ -356,6 +430,8 @@
     if (code === "zh-Hant") return "zh-Hant";
     if (code === "ja") return "ja";
     if (code === "es") return "es";
+    if (code === "fr") return "fr";
+    if (code === "pt") return "pt";
     if (code === "ru") return "ru";
     if (code === "hi") return "hi";
     if (code === "en-meow") return "en";
@@ -367,6 +443,8 @@
     if (code === "zh-Hant") return "zh_Hant";
     if (code === "ja") return "ja_JP";
     if (code === "es") return "es_ES";
+    if (code === "fr") return "fr_FR";
+    if (code === "pt") return "pt_BR";
     if (code === "ru") return "ru_RU";
     if (code === "hi") return "hi_IN";
     if (code === "en-meow") return "en_US";
