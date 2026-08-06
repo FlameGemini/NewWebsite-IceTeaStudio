@@ -1,0 +1,26 @@
+# Ice Tea Studio
+
+> Independent studio founded in 2023. We design and build digital work with care—clean interfaces, small tools, and finished details.
+
+Official site: https://ice-tea.top/
+
+## Pages
+
+- [Home](https://ice-tea.top/): Brand landing, About, and Projects
+- [People](https://ice-tea.top/people.html): Studio roster and open seats
+
+## Contact
+
+- Email: [feedback@ice-tea.top](mailto:feedback@ice-tea.top)
+- GitHub: [Ice-Tea-Studio](https://github.com/Ice-Tea-Studio)
+
+## Projects
+
+- Ardel — native-style all-in-one Minecraft launcher (coming soon)
+- CinGem — simple P2P chat for friends (internal)
+- Trovanto — incognito browser (private beta)
+
+## Optional
+
+- [Sitemap](https://ice-tea.top/sitemap.xml)
+- [robots.txt](https://ice-tea.top/robots.txt)
