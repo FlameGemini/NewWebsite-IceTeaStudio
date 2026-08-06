@@ -1,7 +1,7 @@
 ﻿(() => {
   const STORAGE_KEY = "its-lang";
   const DEFAULT_LANG = "en";
-  const SUPPORTED = ["en", "es", "fr", "pt", "ru", "hi", "ja", "zh-CN", "zh-Hant", "en-meow", "zh-meow"];
+  const SUPPORTED = ["en", "es", "fr", "pt", "ru", "hi", "ja", "zh-CN", "zh-Hant"];
 
   const dict = {
     en: {
@@ -32,6 +32,10 @@
       project_trovanto_notice: "Early build complete — now in private beta.",
       projects_more: "And more…",
       powered_prefix: "Powered by",
+      animal_hint: "Dear animal visitors: please switch the language to Japanese.",
+      animal_gate_title: "Enter the animal key",
+      animal_gate_error: "Incorrect key",
+      animal_gate_submit: "Confirm",
       people_kicker: "Core team",
       people_title: "People",
       people_lead: "The minds behind the work—and a couple of seats still warming up.",
@@ -68,6 +72,10 @@
       project_trovanto_notice: "Compilación temprana completa: ahora en beta privada.",
       projects_more: "Y más…",
       powered_prefix: "Con tecnología de",
+      animal_hint: "Queridos visitantes animales: cambien el idioma a japonés.",
+      animal_gate_title: "Introduzca la clave animal",
+      animal_gate_error: "Clave incorrecta",
+      animal_gate_submit: "Confirmar",
       people_kicker: "Equipo principal",
       people_title: "Personas",
       people_lead: "Las mentes detrás del trabajo, y un par de asientos que aún se están calentando.",
@@ -104,6 +112,10 @@
       project_trovanto_notice: "Build précoce terminée — actuellement en bêta privée.",
       projects_more: "Et plus…",
       powered_prefix: "Propulsé par",
+      animal_hint: "Chers visiteurs animaux : veuillez passer la langue en japonais.",
+      animal_gate_title: "Entrez la clé animale",
+      animal_gate_error: "Clé incorrecte",
+      animal_gate_submit: "Confirmer",
       people_kicker: "Équipe principale",
       people_title: "Personnes",
       people_lead: "Les esprits derrière le travail — et quelques places encore en chauffe.",
@@ -140,6 +152,10 @@
       project_trovanto_notice: "Build inicial concluída — agora em beta privada.",
       projects_more: "E mais…",
       powered_prefix: "Com tecnologia",
+      animal_hint: "Caros visitantes animais: mudem o idioma para japonês.",
+      animal_gate_title: "Digite a chave animal",
+      animal_gate_error: "Chave incorreta",
+      animal_gate_submit: "Confirmar",
       people_kicker: "Equipe principal",
       people_title: "Pessoas",
       people_lead: "As mentes por trás do trabalho — e alguns assentos ainda aquecendo.",
@@ -176,6 +192,10 @@
       project_trovanto_notice: "初期ビルド完了 — 現在プライベートベータ中です。",
       projects_more: "その他…",
       powered_prefix: "Powered by",
+      animal_hint: "動物のお客様へ：言語を日本語に切り替えてください。",
+      animal_gate_title: "動物キーを入力してください",
+      animal_gate_error: "キーが正しくありません",
+      animal_gate_submit: "確認",
       people_kicker: "コアチーム",
       people_title: "メンバー",
       people_lead: "作品の背後にいる人々と、まだ温まっているいくつかの席。",
@@ -184,7 +204,7 @@
       open_seat: "空席",
       open_seat_role: "選挙活動中 · コーヒー生産中",
     },
-    // Mild Microsoft-style Chinese: formal, a bit stiff, still readable
+    // Mild Microsoft-style Simplified Chinese: formal, slightly stiff, still readable.
     "zh-CN": {
       meta_title_home: "Ice Tea Studio — 官方网站",
       meta_desc_home:
@@ -213,6 +233,10 @@
       project_trovanto_notice: "早期版本已完成，正在内测中。",
       projects_more: "以及更多…",
       powered_prefix: "由以下技术提供支持",
+      animal_hint: "欢迎各位动物访客将语言切换为日语",
+      animal_gate_title: "请输入动物密钥",
+      animal_gate_error: "密钥不正确",
+      animal_gate_submit: "确认",
       people_kicker: "核心团队",
       people_title: "人员",
       people_lead: "作品背后的人员——以及几个仍在预热的席位。",
@@ -249,6 +273,10 @@
       project_trovanto_notice: "早期版本已完成，正在內測中。",
       projects_more: "以及更多…",
       powered_prefix: "技術提供",
+      animal_hint: "歡迎各位動物訪客將語言切換為日語",
+      animal_gate_title: "請輸入動物密鑰",
+      animal_gate_error: "密鑰不正確",
+      animal_gate_submit: "確認",
       people_kicker: "核心團隊",
       people_title: "成員",
       people_lead: "作品背後的人們——以及幾個仍在暖身的席位。",
@@ -285,6 +313,10 @@
       project_trovanto_notice: "Ранняя сборка готова — сейчас закрытое тестирование.",
       projects_more: "И ещё…",
       powered_prefix: "Работает на",
+      animal_hint: "Уважаемые гости-животные: переключите язык на японский.",
+      animal_gate_title: "Введите животный ключ",
+      animal_gate_error: "Неверный ключ",
+      animal_gate_submit: "Подтвердить",
       people_kicker: "Основная команда",
       people_title: "Команда",
       people_lead: "Люди за работой — и пара мест, которые ещё прогреваются.",
@@ -321,6 +353,10 @@
       project_trovanto_notice: "प्रारंभिक बिल्ड पूरा — अभी बंद बीटा में।",
       projects_more: "और भी…",
       powered_prefix: "संचालित द्वारा",
+      animal_hint: "प्रिय पशु आगंतुकों: कृपया भाषा जापानी में बदलें।",
+      animal_gate_title: "पशु कुंजी दर्ज करें",
+      animal_gate_error: "गलत कुंजी",
+      animal_gate_submit: "पुष्टि करें",
       people_kicker: "मुख्य टीम",
       people_title: "लोग",
       people_lead: "काम के पीछे के दिमाग—और कुछ सीटें जो अभी गर्म हो रही हैं।",
@@ -328,72 +364,6 @@
       role_cinder: "स्टूडियो शुभंकर / प्रेरणा निदेशक",
       open_seat: "खुली सीट",
       open_seat_role: "अभियान जारी · कॉफ़ी बन रही है",
-    },
-    "en-meow": {
-      meta_title_home: "meow meow — meow~",
-      meta_desc_home: "meow meow meow, meow meow meow~ meow! meow, meow, meow...",
-      meta_title_people: "meow — meow",
-      meta_desc_people: "meow meow meow—meow, meow, and meow~?",
-      nav_aria: "meow",
-      nav_home: "meow",
-      nav_people: "meow~",
-      lang_aria: "meow?",
-      since: "meow 2023~",
-      scroll_about: "meow↓",
-      about_title: "meow",
-      about_kicker: "meow meow?",
-      about_p1: "meow meow meow, meow meow~! meow—meow, meow, and meow.",
-      about_p2_html:
-        'meow meow. Meet the <a href="people.html">meow</a>! Write to <a href="mailto:feedback@ice-tea.top">feedback@ice-tea.top</a>~ Code lives on <a href="https://github.com/Ice-Tea-Studio" rel="noopener noreferrer" target="_blank">GitHub</a>!',
-      projects_title: "meow",
-      project_ardel_desc: "meow meow Minecraft meow~",
-      project_ardel_notice: "meow...! meow~",
-      project_cingem_desc: "meow P2P meow~",
-      project_cingem_notice: "meow... this meow is internal only!",
-      project_trovanto_desc: "meow browser~",
-      project_trovanto_notice: "meow done, now meowing!",
-      projects_more: "meow meow...",
-      powered_prefix: "meow by",
-      people_kicker: "meow team",
-      people_title: "meow",
-      people_lead: "meows behind the meow—and seats still warming~",
-      role_flame: "meow & meow!",
-      role_cinder: "meow mascot / meow director~",
-      open_seat: "open meow~",
-      open_seat_role: "campaigning · brewing meow!",
-    },
-    "zh-meow": {
-      meta_title_home: "喵喵喵 — 喵~",
-      meta_desc_home: "喵喵喵喵，喵喵喵喵喵~ 喵！喵喵，喵喵，喵喵喵……",
-      meta_title_people: "喵 — 喵喵喵",
-      meta_desc_people: "喵喵喵喵喵——喵、喵，还有喵~？",
-      nav_aria: "喵",
-      nav_home: "喵",
-      nav_people: "喵~",
-      lang_aria: "喵？",
-      since: "喵 2023~",
-      scroll_about: "喵↓",
-      about_title: "喵",
-      about_kicker: "喵喵？",
-      about_p1: "喵喵喵喵喵喵，喵喵喵~！喵喵——喵、喵，还有喵喵喵。",
-      about_p2_html:
-        '喵喵喵喵。<a href="people.html">喵</a>！喵喵喵 <a href="mailto:feedback@ice-tea.top">feedback@ice-tea.top</a>~ 喵喵在 <a href="https://github.com/Ice-Tea-Studio" rel="noopener noreferrer" target="_blank">GitHub</a>！',
-      projects_title: "喵喵",
-      project_ardel_desc: "喵喵喵喵 Minecraft 喵~",
-      project_ardel_notice: "喵……！喵~",
-      project_cingem_desc: "喵喵 P2P 喵喵~",
-      project_cingem_notice: "喵……此喵仅供喵用！",
-      project_trovanto_desc: "喵喵浏览器~",
-      project_trovanto_notice: "喵喵完成，正在喵中！",
-      projects_more: "喵喵喵…",
-      powered_prefix: "喵 by",
-      people_kicker: "喵喵队",
-      people_title: "喵",
-      people_lead: "喵喵背后的喵——还有几个还在喵的喵~",
-      role_flame: "喵喵 & 喵喵喵！",
-      role_cinder: "喵吉祥物 / 喵灵感~",
-      open_seat: "喵位以待~",
-      open_seat_role: "喵选中 · 喵啡产出中！",
     },
   };
 
@@ -419,14 +389,20 @@
     if (lower.startsWith("pt")) return "pt";
     if (lower.startsWith("ru")) return "ru";
     if (lower.startsWith("hi")) return "hi";
-    if (lower === "zh-meow" || lower === "zh_meow") return "zh-meow";
-    if (lower === "en-meow" || lower === "en_meow") return "en-meow";
-    if (lower === "meow" || lower.includes("miao") || lower === "nya") return "zh-meow";
+    if (
+      lower === "zh-meow" ||
+      lower === "en-meow" ||
+      lower === "meow" ||
+      lower.includes("miao") ||
+      lower === "nya"
+    ) {
+      return DEFAULT_LANG;
+    }
     return DEFAULT_LANG;
   };
 
   const htmlLang = (code) => {
-    if (code === "zh-CN" || code === "zh-meow") return "zh-CN";
+    if (code === "zh-CN") return "zh-CN";
     if (code === "zh-Hant") return "zh-Hant";
     if (code === "ja") return "ja";
     if (code === "es") return "es";
@@ -434,12 +410,11 @@
     if (code === "pt") return "pt";
     if (code === "ru") return "ru";
     if (code === "hi") return "hi";
-    if (code === "en-meow") return "en";
     return "en";
   };
 
   const ogLocale = (code) => {
-    if (code === "zh-CN" || code === "zh-meow") return "zh_CN";
+    if (code === "zh-CN") return "zh_CN";
     if (code === "zh-Hant") return "zh_Hant";
     if (code === "ja") return "ja_JP";
     if (code === "es") return "es_ES";
@@ -447,7 +422,6 @@
     if (code === "pt") return "pt_BR";
     if (code === "ru") return "ru_RU";
     if (code === "hi") return "hi_IN";
-    if (code === "en-meow") return "en_US";
     return "en_US";
   };
 
@@ -468,8 +442,54 @@
   };
 
   let lang = readStored();
+  // Unlocked by animal easter egg — in-memory only.
+  let meowOn = false;
 
-  const t = (key) => dict[lang]?.[key] ?? dict.en[key] ?? key;
+  // One onomatopoeia per locale; strings are rewritten at apply-time (no duplicate dicts).
+  const MEOW_UNIT = {
+    en: "meow",
+    es: "miau",
+    fr: "miaou",
+    pt: "miau",
+    ru: "мяу",
+    hi: "म्याउ",
+    ja: "にゃ",
+    "zh-CN": "喵",
+    "zh-Hant": "喵",
+  };
+
+  const MEOW_KEEP =
+    /Ice Tea Studio|FlameGemini|CinderZero|Minecraft|GitHub|Ardel|CinGem|Trovanto|Cloudflare|feedback@ice-tea\.top|https?:\/\/[^\s"'<>]+|\d+/gi;
+
+  const MEOW_WORD =
+    /[A-Za-zÀ-ÖØ-öø-ÿ]+|[\u0400-\u04FF]+|[\u0900-\u097F]+|[\u3040-\u30FFゝゞー]+|[\u4E00-\u9FFF々〇]+/g;
+
+  const meowify = (raw) => {
+    if (!meowOn || raw == null) return raw;
+    const unit = MEOW_UNIT[lang] || "meow";
+    const join = lang === "ja" || lang.startsWith("zh") ? "" : " ";
+
+    return String(raw).replace(/(<[^>]+>)|([^<]+)/g, (all, tag, text) => {
+      if (tag) return tag;
+      const kept = [];
+      let s = text.replace(MEOW_KEEP, (m) => {
+        kept.push(m);
+        return `\uE000${kept.length - 1}\uE001`;
+      });
+      s = s.replace(MEOW_WORD, (w) => {
+        const n = Math.max(1, Math.min(5, Math.ceil(w.length / (join ? 4 : 1))));
+        return Array.from({ length: n }, () => unit).join(join);
+      });
+      return s.replace(/\uE000(\d+)\uE001/g, (_, i) => kept[+i]);
+    });
+  };
+
+  const t = (key) => meowify(dict[lang]?.[key] ?? dict.en[key] ?? key);
+
+  const setMeow = (on) => {
+    meowOn = !!on;
+    apply();
+  };
 
   const applyMeta = () => {
     const kind = pageKind();
@@ -492,6 +512,16 @@
     setMeta('meta[name="twitter:title"]', "content", title);
     setMeta('meta[name="twitter:description"]', "content", desc);
     setMeta('meta[property="og:locale"]', "content", ogLocale(lang));
+  };
+
+  const closeLangMenus = () => {
+    document.querySelectorAll(".lang-switch").forEach((wrap) => {
+      wrap.classList.remove("is-open");
+      const toggle = wrap.querySelector(".lang-switch__toggle");
+      const menu = wrap.querySelector(".lang-switch__menu");
+      if (toggle) toggle.setAttribute("aria-expanded", "false");
+      if (menu) menu.hidden = true;
+    });
   };
 
   const apply = () => {
@@ -519,26 +549,18 @@
       el.setAttribute("data-notice", t(key));
     });
 
-    document.querySelectorAll("[data-lang]").forEach((btn) => {
+    document.querySelectorAll(".lang-switch__option[data-lang]").forEach((btn) => {
       const code = btn.getAttribute("data-lang");
       const active = code === lang;
       btn.classList.toggle("is-active", active);
-      btn.setAttribute("aria-pressed", active ? "true" : "false");
+      btn.setAttribute("aria-selected", active ? "true" : "false");
     });
 
-    const meowActive = lang === "en-meow" || lang === "zh-meow";
-    document.querySelectorAll(".lang-switch__meow-toggle").forEach((btn) => {
-      btn.classList.toggle("is-active", meowActive);
-      btn.setAttribute("aria-expanded", "false");
-    });
-    document.querySelectorAll(".lang-switch__meow-menu").forEach((menu) => {
-      menu.hidden = true;
-    });
-    document.querySelectorAll(".lang-switch__meow").forEach((wrap) => {
-      wrap.classList.toggle("is-open", false);
-      wrap.classList.toggle("is-active", meowActive);
+    document.querySelectorAll(".lang-switch__toggle").forEach((btn) => {
+      btn.setAttribute("aria-label", t("lang_aria"));
     });
 
+    closeLangMenus();
     applyMeta();
     document.documentElement.dataset.lang = lang;
   };
@@ -549,34 +571,22 @@
     apply();
   };
 
-  const closeMeowMenus = () => {
-    document.querySelectorAll(".lang-switch__meow").forEach((wrap) => {
-      wrap.classList.remove("is-open");
-      const toggle = wrap.querySelector(".lang-switch__meow-toggle");
-      const menu = wrap.querySelector(".lang-switch__meow-menu");
-      if (toggle) toggle.setAttribute("aria-expanded", "false");
-      if (menu) menu.hidden = true;
-    });
-  };
-
   const bindSwitcher = () => {
-    document.querySelectorAll("[data-lang]").forEach((btn) => {
+    document.querySelectorAll(".lang-switch__option[data-lang]").forEach((btn) => {
       btn.addEventListener("click", () => {
         const next = btn.getAttribute("data-lang");
-        if (!next) return;
-        setLang(next);
-        closeMeowMenus();
+        if (next) window.ITS_I18N.setLang(next);
       });
     });
 
-    document.querySelectorAll(".lang-switch__meow-toggle").forEach((toggle) => {
+    document.querySelectorAll(".lang-switch__toggle").forEach((toggle) => {
       toggle.addEventListener("click", (e) => {
         e.stopPropagation();
-        const wrap = toggle.closest(".lang-switch__meow");
-        const menu = wrap?.querySelector(".lang-switch__meow-menu");
+        const wrap = toggle.closest(".lang-switch");
+        const menu = wrap?.querySelector(".lang-switch__menu");
         if (!wrap || !menu) return;
         const willOpen = menu.hidden;
-        closeMeowMenus();
+        closeLangMenus();
         if (willOpen) {
           menu.hidden = false;
           wrap.classList.add("is-open");
@@ -586,16 +596,23 @@
     });
 
     document.addEventListener("click", (e) => {
-      if (e.target.closest(".lang-switch__meow")) return;
-      closeMeowMenus();
+      if (e.target.closest(".lang-switch")) return;
+      closeLangMenus();
     });
 
     document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape") closeMeowMenus();
+      if (e.key === "Escape") closeLangMenus();
     });
   };
 
-  window.ITS_I18N = { t, getLang: () => lang, setLang, apply };
+  window.ITS_I18N = {
+    t,
+    getLang: () => lang,
+    setLang,
+    apply,
+    setMeow,
+    isMeow: () => meowOn,
+  };
 
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", () => {
