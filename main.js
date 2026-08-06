@@ -42,27 +42,53 @@
   );
   onScroll();
 
-  const reveals = document.querySelectorAll("[data-reveal]");
+  const reveals = [...document.querySelectorAll("[data-reveal]")];
+  const revealIn = (el) => el.classList.add("is-in");
+
   if (reduceMotion || !("IntersectionObserver" in window)) {
-    reveals.forEach((el) => el.classList.add("is-in"));
+    reveals.forEach(revealIn);
   } else {
     const revealObserver = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (!entry.isIntersecting) return;
-          entry.target.classList.add("is-in");
+          revealIn(entry.target);
           revealObserver.unobserve(entry.target);
         });
       },
-      { threshold: 0.08, rootMargin: "0px 0px -6% 0px" }
+      { threshold: 0.01, rootMargin: "0px 0px -4% 0px" }
     );
 
     reveals.forEach((el) => revealObserver.observe(el));
 
+    // Eagerly reveal anything already in (or near) the viewport.
+    const flushVisible = () => {
+      const vh = window.innerHeight || document.documentElement.clientHeight;
+      reveals.forEach((el) => {
+        if (el.classList.contains("is-in")) return;
+        const rect = el.getBoundingClientRect();
+        if (rect.top < vh * 0.96 && rect.bottom > 0) {
+          revealIn(el);
+          revealObserver.unobserve(el);
+        }
+      });
+    };
+
     requestAnimationFrame(() => {
-      document.querySelector(".since[data-reveal]")?.classList.add("is-in");
-      document.querySelector(".scroll-cue[data-reveal]")?.classList.add("is-in");
+      document.querySelector(".since[data-reveal]") &&
+        revealIn(document.querySelector(".since[data-reveal]"));
+      document.querySelector(".scroll-cue[data-reveal]") &&
+        revealIn(document.querySelector(".scroll-cue[data-reveal]"));
+      flushVisible();
     });
+
+    // Safety net: never leave below-fold copy stuck at opacity 0.
+    window.setTimeout(() => {
+      reveals.forEach((el) => {
+        if (!el.classList.contains("is-in")) revealIn(el);
+      });
+      revealObserver.disconnect();
+    }, 2500);
   }
 
   if (!reduceMotion && window.matchMedia("(pointer: fine)").matches) {

@@ -1046,8 +1046,8 @@ body.is-scrolled .scroll-cue {
   font-size: inherit;
 }
 
-/* Reveal system — same idea as cinderzero */
-[data-reveal] {
+/* Reveal system — only hide when JS is active (progressive enhancement). */
+.js [data-reveal] {
   opacity: 0;
   transform: translateY(22px);
   transition:
@@ -1055,7 +1055,7 @@ body.is-scrolled .scroll-cue {
     transform var(--dur) var(--ease-out);
 }
 
-[data-reveal].is-in {
+.js [data-reveal].is-in {
   opacity: 1;
   transform: none;
 }
@@ -1104,8 +1104,8 @@ body.is-scrolled .scroll-cue {
 
   .brand .char,
   .brand.is-ready .char,
-  [data-reveal],
-  [data-reveal].is-in,
+  .js [data-reveal],
+  .js [data-reveal].is-in,
   .nav-link,
   .atmosphere__wash,
   .scroll-cue__mouse::after {
