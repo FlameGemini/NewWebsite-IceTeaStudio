@@ -3,17 +3,17 @@
   // Stages: "" | "hint" | "gate" | "pass"
   let stage = "";
 
-  // Decoy strings for casual source grepping (not used for auth).
-  const _decoyA = "FriendIy";
-  const _decoyB = atob("RmFrZUtleQ==");
-  void _decoyA;
-  void _decoyB;
-
-  // XOR-split key material — avoid a plaintext password literal.
-  const _m = [0x15, 0x2a, 0x3c, 0x08, 0x11, 0x07, 0x19, 0x2e];
-  const _x = [0x53, 0x58, 0x55, 0x6d, 0x7f, 0x63, 0x75, 0x57];
-  const _resolve = () =>
-    _m.map((n, i) => String.fromCharCode(n ^ _x[i])).join("");
+  // XOR halves — compared byte-wise; never joined into one string literal.
+  const _u = [0x15, 0x2a, 0x3c, 0x08, 0x11, 0x07, 0x19, 0x2e];
+  const _v = [0x53, 0x58, 0x55, 0x6d, 0x7f, 0x63, 0x75, 0x57];
+  const _ok = (raw) => {
+    if (typeof raw !== "string" || raw.length !== _u.length) return false;
+    let drift = 0;
+    for (let i = 0; i < _u.length; i += 1) {
+      drift |= (raw.charCodeAt(i) | 32) ^ ((_u[i] ^ _v[i]) | 32);
+    }
+    return drift === 0;
+  };
 
   const t = (key) =>
     (window.ITS_I18N && window.ITS_I18N.t(key)) || key;
@@ -92,18 +92,7 @@
 
     form.addEventListener("submit", (e) => {
       e.preventDefault();
-      const value = String(input.value || "").toLowerCase();
-      const expected = _resolve().toLowerCase();
-      let ok = value.length === expected.length;
-      if (ok) {
-        for (let i = 0; i < expected.length; i += 1) {
-          if (value.charCodeAt(i) !== expected.charCodeAt(i)) {
-            ok = false;
-            break;
-          }
-        }
-      }
-      if (!ok) {
+      if (!_ok(input.value)) {
         error.hidden = false;
         error.classList.remove("is-shake");
         void error.offsetWidth;
@@ -195,7 +184,6 @@
       unlockMeow();
     };
 
-    // Reduced-motion users skip the blink loop.
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
       window.setTimeout(unlockMeow, 900);
     } else {
@@ -259,8 +247,6 @@
   const boot = () => {
     wrapI18n();
 
-    // Language option clicks use a closed-over setLang in i18n.js historically;
-    // watching data-lang covers all switch paths.
     new MutationObserver(() => onLangMaybe()).observe(document.documentElement, {
       attributes: true,
       attributeFilter: ["data-lang", "lang"],
