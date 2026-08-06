@@ -43,6 +43,8 @@
       role_cinder: "Studio Mascot / Inspiration Director",
       open_seat: "Open seat",
       open_seat_role: "Campaigning · Producing Coffee",
+      cookie_notice: "This site stores your language choice locally. Cloudflare may set cookies for security and delivery.",
+      cookie_accept: "Got it",
     },
     es: {
       meta_title_home: "Ice Tea Studio — Sitio oficial",
@@ -83,6 +85,8 @@
       role_cinder: "Mascota del estudio / Director de inspiración",
       open_seat: "Asiento abierto",
       open_seat_role: "En campaña · Produciendo café",
+      cookie_notice: "Este sitio guarda su idioma localmente. Cloudflare puede establecer cookies de seguridad y entrega.",
+      cookie_accept: "Entendido",
     },
     fr: {
       meta_title_home: "Ice Tea Studio — Site officiel",
@@ -123,6 +127,8 @@
       role_cinder: "Mascotte du studio / Directeur de l’inspiration",
       open_seat: "Place ouverte",
       open_seat_role: "En campagne · Production de café",
+      cookie_notice: "Ce site enregistre votre langue localement. Cloudflare peut déposer des cookies pour la sécurité et la diffusion.",
+      cookie_accept: "Compris",
     },
     pt: {
       meta_title_home: "Ice Tea Studio — Site oficial",
@@ -163,6 +169,8 @@
       role_cinder: "Mascote do estúdio / Diretor de inspiração",
       open_seat: "Assento aberto",
       open_seat_role: "Em campanha · Produzindo café",
+      cookie_notice: "Este site guarda o seu idioma localmente. A Cloudflare pode definir cookies de segurança e entrega.",
+      cookie_accept: "Entendi",
     },
     ja: {
       meta_title_home: "Ice Tea Studio — 公式サイト",
@@ -203,6 +211,8 @@
       role_cinder: "スタジオマスコット / インスピレーションディレクター",
       open_seat: "空席",
       open_seat_role: "選挙活動中 · コーヒー生産中",
+      cookie_notice: "このサイトは言語設定を端末に保存します。Cloudflare がセキュリティと配信のために Cookie を設定する場合があります。",
+      cookie_accept: "了解",
     },
     // Mild Microsoft-style Simplified Chinese: formal, slightly stiff, still readable.
     "zh-CN": {
@@ -244,6 +254,8 @@
       role_cinder: "工作室吉祥物 / 灵感总监",
       open_seat: "开放席位",
       open_seat_role: "竞选中 · 制作咖啡中",
+      cookie_notice: "本网站会在本地保存您的语言偏好。Cloudflare 可能会设置用于安全与内容分发的 Cookie。",
+      cookie_accept: "知道了",
     },
     "zh-Hant": {
       meta_title_home: "Ice Tea Studio — 官方網站",
@@ -284,6 +296,8 @@
       role_cinder: "工作室吉祥物 / 靈感總監",
       open_seat: "開放席位",
       open_seat_role: "競選中 · 製作咖啡中",
+      cookie_notice: "本網站會在本機儲存您的語言偏好。Cloudflare 可能會設定用於安全與內容傳遞的 Cookie。",
+      cookie_accept: "知道了",
     },
     ru: {
       meta_title_home: "Ice Tea Studio — Официальный сайт",
@@ -324,6 +338,8 @@
       role_cinder: "Талисман студии / директор по вдохновению",
       open_seat: "Открытое место",
       open_seat_role: "Идёт кампания · Варим кофе",
+      cookie_notice: "Сайт сохраняет выбранный язык локально. Cloudflare может устанавливать cookie для безопасности и доставки.",
+      cookie_accept: "Понятно",
     },
     hi: {
       meta_title_home: "Ice Tea Studio — आधिकारिक वेबसाइट",
@@ -364,6 +380,8 @@
       role_cinder: "स्टूडियो शुभंकर / प्रेरणा निदेशक",
       open_seat: "खुली सीट",
       open_seat_role: "अभियान जारी · कॉफ़ी बन रही है",
+      cookie_notice: "यह साइट आपकी भाषा पसंद स्थानीय रूप से सहेजती है। सुरक्षा और डिलीवरी के लिए Cloudflare कुकीज़ सेट कर सकता है।",
+      cookie_accept: "समझ गया",
     },
   };
 

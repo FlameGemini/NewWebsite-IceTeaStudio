@@ -138,4 +138,35 @@
       showNotice(message);
     });
   });
+
+  /* Cookie / local-storage notice */
+  const COOKIE_KEY = "its-cookie-ok";
+  const cookieBar = document.getElementById("cookie-notice");
+  if (cookieBar) {
+    let acknowledged = false;
+    try {
+      acknowledged = localStorage.getItem(COOKIE_KEY) === "1";
+    } catch {
+      acknowledged = false;
+    }
+
+    if (!acknowledged) {
+      cookieBar.hidden = false;
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => cookieBar.classList.add("is-visible"));
+      });
+
+      cookieBar.querySelector(".cookie-notice__accept")?.addEventListener("click", () => {
+        try {
+          localStorage.setItem(COOKIE_KEY, "1");
+        } catch {
+          /* ignore */
+        }
+        cookieBar.classList.remove("is-visible");
+        window.setTimeout(() => {
+          cookieBar.hidden = true;
+        }, reduceMotion ? 0 : 320);
+      });
+    }
+  }
 })();
